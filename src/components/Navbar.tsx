@@ -12,8 +12,9 @@ export default function Navbar() {
 
         <nav className={styles.links} aria-label="Primary">
           <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/products">Products</Link>
+          <Link href="/cart">Cart</Link>
+          <Link href="/about">About/Contact</Link>
         </nav>
       </div>
     </header>
