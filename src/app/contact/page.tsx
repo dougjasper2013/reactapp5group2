@@ -1,78 +1,99 @@
 export default function ContactPage() {
   return (
-    <div
+    <main
       style={{
         minHeight: "100vh",
-        backgroundColor: "#f4f7fb",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "20px",
+        backgroundColor: "#0f0f0f",
+        padding: "50px 20px",
+        fontFamily: "Arial, sans-serif",
       }}
     >
-      <div
+      <section
         style={{
-          backgroundColor: "white",
-          padding: "40px",
-          borderRadius: "16px",
-          width: "100%",
-          maxWidth: "500px",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+          maxWidth: "900px",
+          margin: "0 auto",
+          backgroundColor: "#f4f1e8",
+          borderRadius: "22px",
+          padding: "35px",
         }}
       >
-        <h1 style={{ marginBottom: "10px" }}>Contact Gadget Genie</h1>
-
-        <p style={{ marginBottom: "20px" }}>
-          Have questions? Send us a message.
+        <p style={{ fontSize: "12px", letterSpacing: "2px", fontWeight: "bold" }}>
+          CONTACT GADGET GENIE
         </p>
 
-        <form
+        <h1 style={{ fontSize: "42px", marginBottom: "10px" }}>
+          We’d love to hear from you.
+        </h1>
+
+        <p style={{ maxWidth: "600px", lineHeight: "1.6" }}>
+          Have a question about our gadgets, orders, or returns? Send us a message
+          and our team will get back to you soon.
+        </p>
+      </section>
+
+      <section
+        style={{
+          maxWidth: "900px",
+          margin: "25px auto 0",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "20px",
+        }}
+      >
+        <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
+            backgroundColor: "#f4f1e8",
+            borderRadius: "18px",
+            padding: "25px",
           }}
         >
-          <input
-            type="text"
-            placeholder="Your Name"
-            style={inputStyle}
-          />
+          <h2>Send a Message</h2>
 
-          <input
-            type="email"
-            placeholder="Your Email"
-            style={inputStyle}
-          />
+          <form style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+            <input placeholder="Your Name" style={inputStyle} />
+            <input placeholder="Your Email" type="email" style={inputStyle} />
+            <textarea placeholder="Your Message" rows={6} style={inputStyle} />
 
-          <textarea
-            placeholder="Your Message"
-            rows={5}
-            style={inputStyle}
-          />
+            <button style={buttonStyle}>Send Message</button>
+          </form>
+        </div>
 
-          <button style={buttonStyle}>
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
+        <div
+          style={{
+            backgroundColor: "#f4f1e8",
+            borderRadius: "18px",
+            padding: "25px",
+          }}
+        >
+          <h2>Store Information</h2>
+          <p>📧 support@gadgetgenie.com</p>
+          <p>📱 (123) 456-7890</p>
+          <p>📍 Toronto, Canada</p>
+
+          <h2 style={{ marginTop: "30px" }}>Support Hours</h2>
+          <p>Monday - Friday</p>
+          <p>9:00 AM - 5:00 PM</p>
+        </div>
+      </section>
+    </main>
   );
 }
 
 const inputStyle = {
   padding: "12px",
-  borderRadius: "8px",
-  border: "1px solid #ccc",
+  borderRadius: "10px",
+  border: "1px solid #c9c3b5",
   fontSize: "16px",
+  backgroundColor: "#fffaf0",
 };
 
 const buttonStyle = {
-  padding: "12px",
-  borderRadius: "8px",
+  padding: "14px",
+  borderRadius: "10px",
   border: "none",
-  backgroundColor: "#2563eb",
+  backgroundColor: "#111111",
   color: "white",
   fontSize: "16px",
+  fontWeight: "bold",
   cursor: "pointer",
 };
