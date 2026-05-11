@@ -13,7 +13,7 @@ const products = [
     id: 2,
     name: "MacBook Pro",
     price: 1999,
-    image: "https://unsplash.com/photos/slightly-opened-silver-macbook-mP7aPSUm7aE",
+    image: "/macbook-air.jpg"
   },
   {
     id: 3,
