@@ -13,8 +13,7 @@ export default function ContactPage() {
       </h1>
 
       <p style={{ marginBottom: "30px", color: "gray" }}>
-        We'd love to hear from you! Send us your questions,
-        feedback, or product inquiries.
+        We&apos;d love to hear from you! Send us your questions, feedback, or product inquiries.
       </p>
 
       <form
