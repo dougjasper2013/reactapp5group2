@@ -173,7 +173,7 @@ export default function CartPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: "1fr",
             gap: "25px",
           }}
         >
@@ -204,6 +204,7 @@ export default function CartPage() {
                   padding: "18px",
                   marginBottom: "18px",
                   display: "flex",
+                  flexWrap: "wrap",
                   alignItems: "center",
                   justifyContent: "space-between",
                   gap: "15px",
@@ -302,16 +303,18 @@ export default function CartPage() {
                 {cartItems.map((item) => (
                   <div
                     key={item.id}
-                    style={{
-                      border: "1px solid #d6d0c7",
-                      borderRadius: "18px",
-                      padding: "18px",
-                      marginBottom: "18px",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
+                style={{
+                  border: "1px solid #d6d0c7",
+                  borderRadius: "18px",
+                  padding: "18px",
+                  marginBottom: "18px",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "12px",
+                }}
+              >
                     <div
                       style={{
                         display: "flex",
@@ -404,6 +407,8 @@ export default function CartPage() {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
+                    flexWrap: "wrap",
+                    gap: "14px",
                   }}
                 >
                   <div>

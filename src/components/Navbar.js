@@ -10,38 +10,38 @@ export default function Navbar() {
 
       {/* HOME */}
 
-      <div className="nav-item">
+      <Link href="/" className="nav-item">
         <span>🏠</span>
         <p>Home</p>
-      </div>
+      </Link>
 
       {/* PRODUCTS */}
 
-      <Link href="/" className="nav-item active">
+      <Link href="/products" className="nav-item">
         <span>🛍️</span>
         <p>Products</p>
       </Link>
 
       {/* ABOUT */}
 
-      <div className="nav-item">
+      <Link href="/about" className="nav-item">
         <span>ℹ️</span>
         <p>About</p>
-      </div>
+      </Link>
 
       {/* CART */}
 
-      <div className="nav-item">
+      <Link href="/cart" className="nav-item">
         <span>🛒</span>
         <p>Cart</p>
-      </div>
+      </Link>
 
       {/* CONTACT */}
 
-      <div className="nav-item">
+      <Link href="/contact" className="nav-item">
         <span>👤</span>
         <p>Contact</p>
-      </div>
+      </Link>
 
     </nav>
 
