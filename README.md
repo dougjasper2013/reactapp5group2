@@ -1,36 +1,129 @@
+# 🛒 Gadget Genie
+
+Gadget Genie is a modern full-stack E-Commerce web application built using React and Next.js. The platform allows users to browse tech gadgets, search products, add items to cart, manage orders, and enjoy a responsive online shopping experience. From keyboards and audio gear to charging essentials.
+
+---
+
+## 👥 Team Members
+
+This project was collaboratively developed by a team of 5 members:
+
+1. Dion Gusija
+2. Hiba Aboshawish
+3. Samreen Baig
+4. Jemielyn Bingham
+5. Nigel Kallan
+
+---
+
+## 🚀 Tech Stack
+
+### Frontend
+- React.js
+- Next.js
+- Tailwind CSS
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+
+### Development Tools
+- Git & GitHub
+- VS Code
+
+### Deployment
+- Vercel
+- Render
+
+---
+
+## ✨ Features
+
+- 🛍 Browse tech gadgets
+- 🔍 Product search and filtering
+- 🛒 Shopping cart functionality
+- ❤️ Wishlist support
+- 👤 User authentication and login
+- 📦 Order management
+- 📱 Responsive design
+- 🛠 Admin dashboard
+
+---
+
+## 📂 Project Structure
+
+Gadget-Genie/
+│
+├── frontend/
+├── backend/
+├── public/
+├── src/
+├── components/
+├── pages/
+├── styles/
+└── README.md
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+⚙️ Installation
+Clone the repository
 
-```bash
+git clone https://github.com/dougjasper2013/reactapp5group2.git
+
+
+Navigate into the project folder
+
+cd reactapp5group2
+
+
+Install dependencies
+
+npm install
+
+
+Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌐 Pages Included
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Home Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Products Page
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Product Details Page
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Cart Page
+
+
+Login/Register Page
+
+
+Admin Dashboard
+
+
+🌐 Screenshots
+
+! [ABOUT PAGE] (Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/About-Screenshot.png)
+
+! [CONTACT PAGE] (Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/Contact-Screenshot.png)
+
+
+📄 License
+This project is licensed under the MIT License.
+
+
+⭐ Support
+If you like this project, please give it a ⭐ on GitHub!
