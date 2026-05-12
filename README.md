@@ -105,15 +105,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Home Page
 
-
 Products Page
-
 
 About Page
 
-
 Cart Page
-
 
 Contact Page
 
@@ -122,7 +118,12 @@ Contact Page
 
 ## 🌐 Screenshots
 
+
+! [HOME PAGE] (/Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/Home-Screenshot.png)
+
 ! [ABOUT PAGE] (Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/About-Screenshot.png)
+
+! [PRODUCTS PAGE] (/Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/Products-Screenshot.png)
 
 ! [CONTACT PAGE] (Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/Contact-Screenshot.png)
 
