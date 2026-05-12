@@ -1,113 +1,35 @@
 "use client";
 
-import { useState } from "react";
-
-const products = [
-  {
-    id: 1,
-    name: "iPhone 15 Pro",
-    price: 1199,
-    description: "Latest Apple smartphone with powerful performance.",
-    image:
-      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500",
-  },
-  {
-    id: 2,
-    name: "MacBook Pro",
-    price: 1999,
-    description: "Powerful laptop for work and creativity.",
-    image:
-      "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500",
-  },
-  {
-    id: 3,
-    name: "Sony Headphones",
-    price: 299,
-    description: "High-quality sound with noise cancellation.",
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
-  },
-  {
-    id: 4,
-    name: "Apple Watch",
-    price: 499,
-    description: "Track fitness, notifications, and more.",
-    image:
-      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500",
-  },
-];
+import { useEffect, useMemo, useState } from "react";
+import { products } from "../../data/products";
+import { readCart, addItemToCart, updateCartQuantity, removeCartItem } from "../../lib/cartStorage";
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<any[]>([]);
 
-  // Add To Cart
+  useEffect(() => {
+    setCartItems(readCart());
+  }, []);
+
   const addToCart = (product: any) => {
-    const existingItem = cartItems.find(
-      (item) => item.id === product.id
-    );
-
-    if (existingItem) {
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === product.id
-            ? {
-                ...item,
-                quantity: item.quantity + 1,
-              }
-            : item
-        )
-      );
-    } else {
-      setCartItems([
-        ...cartItems,
-        {
-          ...product,
-          quantity: 1,
-        },
-      ]);
-    }
+    setCartItems(addItemToCart(product));
   };
 
-  // Increase Quantity
   const increaseQuantity = (id: number) => {
-    setCartItems(
-      cartItems.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              quantity: item.quantity + 1,
-            }
-          : item
-      )
-    );
+    setCartItems(updateCartQuantity(id, 1));
   };
 
-  // Decrease Quantity
   const decreaseQuantity = (id: number) => {
-    setCartItems(
-      cartItems.map((item) =>
-        item.id === id && item.quantity > 1
-          ? {
-              ...item,
-              quantity: item.quantity - 1,
-            }
-          : item
-      )
-    );
+    setCartItems(updateCartQuantity(id, -1));
   };
 
-  // Remove Item
   const removeItem = (id: number) => {
-    setCartItems(
-      cartItems.filter((item) => item.id !== id)
-    );
+    setCartItems(removeCartItem(id));
   };
 
-  // Total Price
-  const totalPrice = cartItems.reduce(
-    (total, item) =>
-      total + item.price * item.quantity,
-    0
+  const totalPrice = useMemo(
+    () => cartItems.reduce((total, item) => total + item.price * item.quantity, 0),
+    [cartItems]
   );
 
   return (
@@ -125,7 +47,6 @@ export default function CartPage() {
           margin: "0 auto",
         }}
       >
-        {/* HERO */}
         <div
           style={{
             backgroundColor: "#f3efe9",
@@ -164,20 +85,17 @@ export default function CartPage() {
               fontSize: "18px",
             }}
           >
-            Review your selected gadgets, update quantities,
-            and manage your shopping cart easily.
+            Review your selected gadgets, update quantities, and manage your shopping cart easily.
           </p>
         </div>
 
-        {/* GRID */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: "1fr",
             gap: "25px",
           }}
         >
-          {/* PRODUCTS */}
           <div
             style={{
               backgroundColor: "#f3efe9",
@@ -204,6 +122,7 @@ export default function CartPage() {
                   padding: "18px",
                   marginBottom: "18px",
                   display: "flex",
+                  flexWrap: "wrap",
                   alignItems: "center",
                   justifyContent: "space-between",
                   gap: "15px",
@@ -264,10 +183,7 @@ export default function CartPage() {
                     ${product.price}
                   </p>
 
-                  <button
-                    onClick={() => addToCart(product)}
-                    style={blackButton}
-                  >
+                  <button onClick={() => addToCart(product)} style={blackButton}>
                     Add to Cart
                   </button>
                 </div>
@@ -275,7 +191,6 @@ export default function CartPage() {
             ))}
           </div>
 
-          {/* CART */}
           <div
             style={{
               backgroundColor: "#f3efe9",
@@ -294,9 +209,7 @@ export default function CartPage() {
             </h2>
 
             {cartItems.length === 0 ? (
-              <p style={{ color: "#555" }}>
-                Your cart is empty.
-              </p>
+              <p style={{ color: "#555" }}>Your cart is empty.</p>
             ) : (
               <>
                 {cartItems.map((item) => (
@@ -308,8 +221,10 @@ export default function CartPage() {
                       padding: "18px",
                       marginBottom: "18px",
                       display: "flex",
+                      flexWrap: "wrap",
                       justifyContent: "space-between",
                       alignItems: "center",
+                      gap: "12px",
                     }}
                   >
                     <div
@@ -340,9 +255,7 @@ export default function CartPage() {
                           {item.name}
                         </h3>
 
-                        <p style={{ color: "#555" }}>
-                          ${item.price}
-                        </p>
+                        <p style={{ color: "#555" }}>${item.price}</p>
                       </div>
                     </div>
 
@@ -360,40 +273,24 @@ export default function CartPage() {
                           justifyContent: "flex-end",
                         }}
                       >
-                        <button
-                          onClick={() =>
-                            decreaseQuantity(item.id)
-                          }
-                          style={quantityButton}
-                        >
+                        <button onClick={() => decreaseQuantity(item.id)} style={quantityButton}>
                           -
                         </button>
 
                         <span>{item.quantity}</span>
 
-                        <button
-                          onClick={() =>
-                            increaseQuantity(item.id)
-                          }
-                          style={quantityButton}
-                        >
+                        <button onClick={() => increaseQuantity(item.id)} style={quantityButton}>
                           +
                         </button>
                       </div>
 
-                      <button
-                        onClick={() =>
-                          removeItem(item.id)
-                        }
-                        style={blackButton}
-                      >
+                      <button onClick={() => removeItem(item.id)} style={blackButton}>
                         Remove
                       </button>
                     </div>
                   </div>
                 ))}
 
-                {/* TOTAL */}
                 <div
                   style={{
                     backgroundColor: "black",
@@ -404,43 +301,20 @@ export default function CartPage() {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
+                    flexWrap: "wrap",
+                    gap: "14px",
                   }}
                 >
                   <div>
-                    <h2
-                      style={{
-                        marginBottom: "10px",
-                      }}
-                    >
-                      Total
-                    </h2>
-
-                    <p
-                      style={{
-                        color: "#ccc",
-                        fontSize: "14px",
-                      }}
-                    >
+                    <h2 style={{ marginBottom: "10px" }}>Total</h2>
+                    <p style={{ color: "#ccc", fontSize: "14px" }}>
                       Taxes and shipping calculated at checkout.
                     </p>
                   </div>
 
-                  <div
-                    style={{
-                      textAlign: "right",
-                    }}
-                  >
-                    <h1
-                      style={{
-                        marginBottom: "15px",
-                      }}
-                    >
-                      ${totalPrice}
-                    </h1>
-
-                    <button style={checkoutButton}>
-                      Checkout
-                    </button>
+                  <div style={{ textAlign: "right" }}>
+                    <h1 style={{ marginBottom: "15px" }}>${totalPrice}</h1>
+                    <button style={checkoutButton}>Checkout</button>
                   </div>
                 </div>
               </>
