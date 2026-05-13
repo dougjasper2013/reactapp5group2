@@ -6,44 +6,57 @@ export default function Navbar() {
 
   return (
 
-    <nav className="bottom-navbar">
+    <header className="top-navbar">
 
-      {/* HOME */}
+      {/* LOGO */}
 
-      <Link href="/" className="nav-item">
-        <span>🏠</span>
-        <p>Home</p>
-      </Link>
+      <div className="logo-box">
 
-      {/* PRODUCTS */}
+        <Link href="/">
 
-      <Link href="/products" className="nav-item">
-        <span>🛍️</span>
-        <p>Products</p>
-      </Link>
+          <img
+            src="/logo.png"
+            alt="Gadget Genie Logo"
+            className="floating-logo"
+          />
 
-      {/* ABOUT */}
+        </Link>
 
-      <Link href="/about" className="nav-item">
-        <span>ℹ️</span>
-        <p>About</p>
-      </Link>
+      </div>
 
-      {/* CART */}
 
-      <Link href="/cart" className="nav-item">
+
+      {/* NAV LINKS */}
+
+      <nav className="nav-links">
+
+        <Link href="/">Home</Link>
+
+        <Link href="/products">Products</Link>
+
+        <Link href="/about">About</Link>
+
+        <Link href="/cart">Cart</Link>
+
+        <Link href="/contact">Contact</Link>
+
+      </nav>
+
+
+
+      {/* RIGHT ICONS */}
+
+      <div className="nav-icons">
+
+        <span>🔍</span>
+
         <span>🛒</span>
-        <p>Cart</p>
-      </Link>
 
-      {/* CONTACT */}
-
-      <Link href="/contact" className="nav-item">
         <span>👤</span>
-        <p>Contact</p>
-      </Link>
 
-    </nav>
+      </div>
+
+    </header>
 
   );
 }
