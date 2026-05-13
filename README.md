@@ -122,11 +122,17 @@ Contact Page
 ! [HOME PAGE] 
 <img width="1920" height="1080" alt="Home Screenshot" src="https://github.com/user-attachments/assets/1d04c16d-b38c-423c-b979-fd73c4167668" />
 
-! [ABOUT PAGE] (Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/About-Screenshot.png)
+! [PRODUCTS PAGE] 
+<img width="1920" height="1080" alt="Products Screenshot" src="https://github.com/user-attachments/assets/690e805a-8283-4eff-8be7-4a8996fe1869" />
 
-! [PRODUCTS PAGE] (/Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/Products-Screenshot.png)
+! [ABOUT PAGE] 
+<img width="1920" height="1080" alt="About Screenshot" src="https://github.com/user-attachments/assets/98d902bb-924c-4eb8-9958-6d7f497beb1a" />
 
-! [CONTACT PAGE] (Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/Contact-Screenshot.png)
+! [CART PAGE] 
+<img width="1920" height="1080" alt="Cart Screenshot" src="https://github.com/user-attachments/assets/f82096ed-fbc5-4e50-b2c3-9ff7a9710ad6" />
+
+! [CONTACT PAGE]
+<img width="1920" height="1080" alt="Contact Screenshot" src="https://github.com/user-attachments/assets/355e5aef-77a6-4797-a363-063dd4e47c1a" />
 
 
 
