@@ -23,6 +23,7 @@ This project was collaboratively developed by a team of 5 members:
 - Next.js
 - Tailwind CSS
 - JavaScript
+- TypeScript
 
 ### Backend
 - Node.js
