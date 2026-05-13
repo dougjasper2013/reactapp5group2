@@ -3,14 +3,30 @@
 export default function ProductCard({ product, addToCart }) {
   return (
     <div className="card">
-      <img src={product.image} alt={product.name} />
+      <p className="new-tag">NEW</p>
 
-      <h3>{product.name}</h3>
-      <p className="price">${product.price}</p>
+      <h2>{product.name}</h2>
 
-      <button onClick={() => addToCart(product)}>
-        Add to Cart
-      </button>
+      <div className="image-box">
+        <img src={product.image} alt={product.name} />
+      </div>
+
+      <div className="colors">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div className="bottom-row">
+        <p className="price">
+          From ${product.price}
+        </p>
+
+        <button onClick={() => addToCart(product)}>
+          Buy
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,80 +1,215 @@
-export default function ContactPage() {
+import ProductList from "../components/ProductList";
+
+import Link from "next/link";
+
+export default function HomeHero() {
   return (
-    <div
-      style={{
-        padding: "40px",
-        fontFamily: "Arial",
-        maxWidth: "700px",
-        margin: "auto",
-      }}
-    >
-      <h1 style={{ fontSize: "40px", marginBottom: "10px" }}>
-        Contact Gadget Genie
-      </h1>
+    <>
+      {/* HERO BANNER */}
 
-      <p style={{ marginBottom: "30px", color: "gray" }}>
-        We&apos;d love to hear from you! Send us your questions, feedback, or product inquiries.
-      </p>
+      <section className="hero-banner">
 
-      <form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "15px",
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Your Name"
-          style={{
-            padding: "12px",
-            borderRadius: "8px",
-            border: "1px solid #ccc",
-          }}
-        />
+        <div className="hero-left">
 
-        <input
-          type="email"
-          placeholder="Your Email"
-          style={{
-            padding: "12px",
-            borderRadius: "8px",
-            border: "1px solid #ccc",
-          }}
-        />
+          <span className="hero-tag">NEW ARRIVAL</span>
 
-        <textarea
-          placeholder="Your Message"
-          rows={6}
-          style={{
-            padding: "12px",
-            borderRadius: "8px",
-            border: "1px solid #ccc",
-          }}
-        />
+          <h1>Watch Wearable Device</h1>
 
-        <button
-          type="submit"
-          style={{
-            backgroundColor: "black",
-            color: "white",
-            padding: "12px",
-            borderRadius: "8px",
-            border: "none",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
-        >
-          Send Message
-        </button>
-      </form>
+          <p>
+            Discover our latest smart gadgets and tech innovations.
+          </p>
 
-      <div style={{ marginTop: "40px" }}>
-        <h3>Store Information</h3>
-        <p>Email: support@gadgetgenie.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Location: Toronto, Canada</p>
-      </div>
-    </div>
+          <Link href="/products">
+            <button>Shop Now</button>
+          </Link>
+
+        </div>
+
+        <div className="hero-right">
+
+          <img
+            src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1200&auto=format&fit=crop"
+            alt="Smart Watch"
+          />
+
+        </div>
+
+      </section>
+
+
+
+      {/* TOP BANNERS */}
+
+      <section className="top-banner-section">
+
+        <div className="top-banner-card purple">
+
+          <div>
+
+            <p>UP TO 75% OFF!</p>
+
+            <h2>Unbeatable Discounts</h2>
+
+            <Link href="/products">
+              Shop Now →
+            </Link>
+
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1589003077984-894e133dabab?q=80&w=1000&auto=format&fit=crop"
+            alt="Speaker"
+          />
+
+        </div>
+
+
+
+        <div className="top-banner-card blue">
+
+          <div>
+
+            <p>Hurry Up! On Sale</p>
+
+            <h2>Massive Fashion Sale</h2>
+
+            <Link href="/products">
+              Shop Now →
+            </Link>
+
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Laptop"
+          />
+
+        </div>
+
+      </section>
+
+
+
+      {/* BEST SELLING */}
+
+      <section className="best-selling">
+
+        <div className="section-title">
+
+          <h2>Best Selling Products</h2>
+
+          <Link href="/products">
+            View All →
+          </Link>
+
+        </div>
+
+        <div className="best-selling-grid">
+
+          <div className="big-sale-card">
+
+            <div className="big-sale-content">
+
+              <h3>Hot Collection</h3>
+
+              <p>
+                Premium gadgets and smart devices
+              </p>
+
+              <Link href="/products">
+                Shop Now →
+              </Link>
+
+            </div>
+
+            <img
+              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1000&auto=format&fit=crop"
+              alt="Phone"
+            />
+
+          </div>
+
+
+
+          <div className="small-product-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1000&auto=format&fit=crop"
+              alt="Watch"
+            />
+
+            <h4>Apple Watch</h4>
+
+            <p>$499</p>
+
+            <Link href="/products">
+              Buy Now
+            </Link>
+
+          </div>
+
+
+
+          <div className="small-product-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+              alt="Headphones"
+            />
+
+            <h4>Sony Headphones</h4>
+
+            <p>$299</p>
+
+            <Link href="/products">
+              Buy Now
+            </Link>
+
+          </div>
+
+
+
+          <div className="small-product-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1545127398-14699f92334b?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    alt="Headphones"
+  />
+
+  <h4>Sony Headphones</h4>
+
+  <p>$299</p>
+
+  <Link href="/products">
+    Buy Now
+  </Link>
+
+</div>
+            
+        </div>
+
+      </section>
+
+
+
+      {/* SPECIAL DISCOUNT */}
+
+      <section className="discount-banner">
+
+        <h2>Special Discount</h2>
+
+        <p>Up to 50% OFF on selected gadgets</p>
+
+        <Link href="/products">
+          <button>Shop Deals</button>
+        </Link>
+
+      </section>
+
+
+
+      
+
+    </>
   );
 }
