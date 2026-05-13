@@ -119,7 +119,8 @@ Contact Page
 ## 🌐 Screenshots
 
 
-! [HOME PAGE] (/Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/Home-Screenshot.png)
+! [HOME PAGE] 
+<img width="1920" height="1080" alt="Home Screenshot" src="https://github.com/user-attachments/assets/1d04c16d-b38c-423c-b979-fd73c4167668" />
 
 ! [ABOUT PAGE] (Users/nigelkallan/Desktop/REACT 2026/reactapp5group2/public/About-Screenshot.png)
 
