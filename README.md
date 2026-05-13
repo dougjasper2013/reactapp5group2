@@ -56,6 +56,7 @@ This project was collaboratively developed by a team of 5 members:
 
 ## 📂 Project Structure
 
+````md
 Gadget-Genie/
 │
 ├── frontend/
