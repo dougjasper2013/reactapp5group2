@@ -56,7 +56,7 @@ This project was collaboratively developed by a team of 5 members:
 
 ## 📂 Project Structure
 
-````md
+```text
 Gadget-Genie/
 │
 ├── frontend/
@@ -67,6 +67,8 @@ Gadget-Genie/
 ├── pages/
 ├── styles/
 └── README.md
+```
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
